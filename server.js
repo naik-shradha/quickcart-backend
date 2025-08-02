@@ -46,6 +46,10 @@ console.log("🔴 WebSocket disconnected:", socket.id);
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("QuickCart backend is running.");
+});
+
 // API Routes
 app.use("/api/products", require("./routes/productRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
