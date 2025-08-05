@@ -21,7 +21,7 @@ const server = http.createServer(app);
 
 // ✅ ALLOWED ORIGINS: Add both Vercel and localhost for dev
 const allowedOrigins = [
-  "https://quickcart-frontend-69dgr0srh-naik-shradhas-projects.vercel.app",
+  "https://quickcart-frontend-am2tny800-naik-shradhas-projects.vercel.app",
   "http://localhost:3000",
   "https://quickcart-frontend-smoky.vercel.app",
   "https://quickcart-frontend-git-main-naik-shradhas-projects.vercel.app",
