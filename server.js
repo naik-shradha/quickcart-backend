@@ -19,18 +19,33 @@ const app = express();
 // Create HTTP server to enable WebSocket (socket.io)
 const server = http.createServer(app);
 
-// Setup dynamic CORS options
+// ✅ ALLOWED ORIGINS: Add both Vercel and localhost for dev
+const allowedOrigins = [
+  "https://quickcart-frontend-69dgr0srh-naik-shradhas-projects.vercel.app",
+  "http://localhost:3000",
+  "https://quickcart-frontend-smoky.vercel.app",
+  "https://quickcart-frontend-git-main-naik-shradhas-projects.vercel.app",
+  "https://quickcart-frontend-naik-shradhas-projects.vercel.app"
+];
+
+// ✅ Setup dynamic CORS options
 const corsOptions = {
-  origin: process.env.CLIENT_URL || "http://localhost:3000",
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 };
 
-// Apply CORS middleware for Express
+// ✅ Apply CORS middleware for Express
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// Setup WebSocket server with CORS
+// ✅ Setup WebSocket server with CORS
 const io = new Server(server, {
   cors: corsOptions,
 });
