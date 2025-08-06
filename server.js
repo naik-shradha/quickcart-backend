@@ -21,11 +21,11 @@ const server = http.createServer(app);
 
 // ✅ ALLOWED ORIGINS: Add both Vercel and localhost for dev
 const allowedOrigins = [
-  "https://quickcart-frontend-am2tny800-naik-shradhas-projects.vercel.app",
+  "https://quickcart-frontend-one.vercel.app",
   "http://localhost:3000",
-  "https://quickcart-frontend-smoky.vercel.app",
+  "https://quickcart-frontend-naik-shradhas-projects.vercel.app",
   "https://quickcart-frontend-git-main-naik-shradhas-projects.vercel.app",
-  "https://quickcart-frontend-naik-shradhas-projects.vercel.app"
+  "https://quickcart-frontend-8oo7mt50q-naik-shradhas-projects.vercel.app"
 ];
 
 // ✅ Setup dynamic CORS options
