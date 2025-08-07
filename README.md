@@ -27,6 +27,6 @@ This is the backend for **QuickCart**, a real-time grocery ordering platform tha
 - **Socket.io** (real-time cart updates)
 - **@paypal/checkout-server-sdk** (PayPal integration)
 - **dotenv** (environment variables)
-- **Render / Railway** for deployment
+- **Render** for deployment
 
 ---
